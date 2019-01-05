@@ -10,7 +10,7 @@ namespace KKTF_e_Aduan.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View();//
         }
 
         public ActionResult About()
