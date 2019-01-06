@@ -9,6 +9,11 @@ namespace KKTF_e_Aduan.Controllers
     public class HomeController : Controller
     {
 
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
