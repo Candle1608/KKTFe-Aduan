@@ -333,6 +333,7 @@ namespace KKTF_e_Aduan.Controllers
             base.Dispose(disposing);
         }
 
+    
 #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
@@ -344,6 +345,8 @@ namespace KKTF_e_Aduan.Controllers
                 return HttpContext.GetOwinContext().Authentication;
             }
         }
+
+        public object Db { get; private set; }
 
         private void AddErrors(IdentityResult result)
         {

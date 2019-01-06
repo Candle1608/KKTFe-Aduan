@@ -4,11 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace KKTF_e_Aduan.Controllers
 {
     public class HomeController : Controller
     {
-
+        mvcappdb _db = new 
+        public ActionResult Index()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
