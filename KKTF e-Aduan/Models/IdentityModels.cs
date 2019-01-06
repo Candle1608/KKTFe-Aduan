@@ -25,7 +25,6 @@ namespace KKTF_e_Aduan.Models
         {
         }
 
-        public DbSet<complaint> complaint { get; set; }
 
         public static ApplicationDbContext Create()
         {

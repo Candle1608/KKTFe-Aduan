@@ -9,7 +9,7 @@ namespace KKTF_e_Aduan.Controllers
 {
     public class HomeController : Controller
     {
-        mvcappdb _db = new 
+
         public ActionResult Index()
         {
             return View();
@@ -25,6 +25,12 @@ namespace KKTF_e_Aduan.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        
+        public ActionResult complaint()
+        {
+            ViewBag.Message = "Your Complaint List";
             return View();
         }
     }
