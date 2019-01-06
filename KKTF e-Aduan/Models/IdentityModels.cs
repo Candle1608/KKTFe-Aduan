@@ -25,6 +25,7 @@ namespace KKTF_e_Aduan.Models
         {
         }
 
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

@@ -1,31 +1,51 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@* Goes in Views\ComplaintList *@
+<complaint>
+
+@{
+    ViewBag.Title = "Complaint List";
 }
 
-<div class="jumbotron">
-    <p><a class="navbar-brand"><img alt="Brand" src="~/Images/photo_2018-12-24_11-16-11.jpg" height="120" width="150" /></a></p>
-    <h1>KKTF e-Aduan</h1>
+<h2>Complaint List</h2>
 
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@using (Html.BeginForm("Index", "CoomplaintList", FormMethod.Post))
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    ComplaintId
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    RoomNo
+                </th>
+                <th>
+                    Type
+                </th>
+                <th>
+                    Technician
+                </th>
+                <th>
+                    Status
+                </th>
+            </tr>
+        </thead>
+        <tbody id="childtable">
+            @Html.EditorFor(model => Model)
+        </tbody>
+    </table>
+    <p>
+        <input name="command" type="submit" value="Add" />
+        <input name="command" type="submit" value="Delete" />
+        <input name="command" type="submit" value="Edit" />
+    </p>
+    <p>
+       @Html.ValidationSummary()
+        <input name="command" type="submit" value="Submit" />
+    </p>
+}

@@ -1,0 +1,35 @@
+﻿@using EditableListMvc.Models Complaint 
+@model Complaint
+<tr>
+    <td>
+        @Html.HiddenFor(model => model.PrimaryKey)
+        @Html.EditorFor(model => model.ComplaintId)
+        @Html.ValidationMessageFor(model => model.ComplaintId, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.ComplaintId, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.Date)
+        @Html.ValidationMessageFor(model => model.ComplaintId, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.RoomNo)
+        @Html.ValidationMessageFor(model => model.ComplaintId, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.Type)
+        @Html.ValidationMessageFor(model => model.ComplaintId, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.Technician)
+        @Html.ValidationMessageFor(model => model.ComplaintId, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.Status)
+    </td>
+    <td>
+        @Html.EditorFor(model => model.Remove)
+    </td>
+</tr>
