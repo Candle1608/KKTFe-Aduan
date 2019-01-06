@@ -11,9 +11,8 @@ namespace EditableListMvc.Controllers
         // TODO: remove mock database
         private static List<Models.Complaint> MockDb = new List<Models.Complaint>
             {
-                new Models.Complaint { PrimaryKey = 1, FirstName = "Fred", LastName="Than", Age=54 },
-                new Models.Complaint { PrimaryKey = 2, FirstName = "Erin", LastName="Saavedra", Age=37 },
-                new Models.Complaint { PrimaryKey = 4, FirstName = "Abdul", LastName = "Banas", Age = 12 }
+                new Models.Complaint { PrimaryKey = 1, ComplaintId = "123n", Name="Than", Date=54 },
+               
             };
 
         private List<Models.Complaint> _complaintList;
