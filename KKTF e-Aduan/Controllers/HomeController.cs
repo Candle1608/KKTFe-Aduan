@@ -13,6 +13,7 @@ namespace KKTF_e_Aduan.Controllers
         {
             return View();
         }
+        
 
         public ActionResult About()
         {

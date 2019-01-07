@@ -34,6 +34,7 @@ namespace KKTF_e_Aduan.Controllers
                 db.technicians.Add(tech);
                 db.SaveChanges();
                 int latesttechId = tech.techId;
+                ViewBag.Message = "New Technician has been added successfully!";
                 return RedirectToAction("Index");
             }
 

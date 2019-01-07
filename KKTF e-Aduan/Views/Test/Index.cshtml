@@ -17,8 +17,17 @@
     
         <input type="submit" value="Submit" />
 
-    }
 
+    }
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            windows.onload = function () {
+                alert("@ViewBag.Message");
+            };
+            
+        </script>
+    }
 
 </div>
 
