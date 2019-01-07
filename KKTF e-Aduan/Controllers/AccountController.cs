@@ -12,7 +12,7 @@ using KKTF_e_Aduan.Models;
 
 namespace KKTF_e_Aduan.Controllers
 {
-    [Authorize]
+   
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
