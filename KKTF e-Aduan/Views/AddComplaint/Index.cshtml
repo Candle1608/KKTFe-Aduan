@@ -1,0 +1,95 @@
+﻿@model KKTF_e_Aduan.Models.ComplaintViewModels
+@{
+    ViewBag.Title = "Index5";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+<div class="container" style="width:100%; margin-top:2%">
+
+
+    @using (Html.BeginForm("Index", "AddComplaint", FormMethod.Post))
+    {
+    <div class="form-horizontal">
+        <h4>Add Complaint</h4>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.name, "", new { @class = "error" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.matricNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.matricNo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.matricNo, "", new { @class = "error" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "error" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.phoneNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.phoneNo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.phoneNo, "", new { @class = "error" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.roomNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.roomNo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.roomNo, "", new { @class = "error" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.title, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.title, "", new { @class = "error" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.explanation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.explanation, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.explanation, "", new { @class = "error" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.typeOfComplaint, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.typeOfComplaint, ViewBag.ComplaintList as SelectList, "---select---", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.typeOfComplaint, "", new { @class = "error" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.typeOfDamage, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.typeOfDamage, ViewBag.ComplaintList1 as SelectList, "---select---", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.typeOfDamage, "", new { @class = "error" })
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-block btn-primary" />
+        </div>
+        }
+
+    </div>
+
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>

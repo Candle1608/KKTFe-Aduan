@@ -20,10 +20,14 @@
                 @Html.ActionLink("KKTF e-Aduan", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav"> @*Nama yg kita nampak kt interface/nama view/nama controller yang view berada*@
+                <ul class="nav navbar-nav">
+                    @*Nama yg kita nampak kt interface/nama view/nama controller yang view berada*@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Application Form", "Index", "AddComplaint")</li>
+                    <li>@Html.ActionLink("Complaint List", "Index", "ComplaintListStudent")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

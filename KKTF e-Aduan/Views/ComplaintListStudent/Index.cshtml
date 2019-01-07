@@ -1,0 +1,44 @@
+﻿@model IEnumerable<KKTF_e_Aduan.Models.ComplaintListStudentViewModels>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<div class="container" style="width:100%; margin-top:2%">
+
+    @if (Model != null)
+    {
+        <table class="table table-striped">
+            <tr>
+                <th>Complaint Code</th>
+                <th>Room No</th>
+                <th>Title</th>
+                <th>Explanation</th>
+                <th>Type of Complaint</th>
+                <th>Type of Damage</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.complaintCode</td>
+                    <td>@item.roomNo</td>
+                    <td>@item.title</td>
+                    <td>@item.explanation</td>
+                    <td>@item.typeOfcomplaintName</td>
+                    <td>@item.typeOfDamageName</td>
+                    <td>@item.date</td>
+                    <td>@item.status</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</div>
