@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KKTF_e_Aduan.Models
+namespace KKTF_e_Aduan
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TestProfileEntities : DbContext
+    public partial class ProfileEntities : DbContext
     {
-        public TestProfileEntities()
-            : base("name=TestProfileEntities")
+        public ProfileEntities()
+            : base("name=ProfileEntities")
         {
         }
     

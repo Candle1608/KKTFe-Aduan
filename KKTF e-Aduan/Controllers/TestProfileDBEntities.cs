@@ -1,8 +1,8 @@
 ﻿namespace KKTF_e_Aduan.Controllers
 {
-    internal class TestProfileDBEntities
+    internal class ProfileDBEntities
     {
-        public TestProfileDBEntities()
+        public ProfileDBEntities()
         {
         }
     }

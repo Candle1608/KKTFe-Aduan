@@ -1,31 +1,33 @@
 ﻿@model IEnumerable<KKTF_e_Aduan.Table>
 
-
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
-            @Html.Label("Matric No:")
+            @Html.DisplayNameFor(model => model.matricNo)
         </th>
         <th>
-            @Html.Label("Name:")
+            @Html.DisplayNameFor(model => model.name)
         </th>
         <th>
-            @Html.Label("Identification Card:")
+            @Html.DisplayNameFor(model => model.ic)
         </th>
         <th>
-            @Html.Label("Number Phone: ")
+            @Html.DisplayNameFor(model => model.phone)
         </th>
         <th>
-            @Html.Label("Address: ")
+            @Html.DisplayNameFor(model => model.address)
         </th>
         <th>
-            @Html.Label("Programme: ")
+            @Html.DisplayNameFor(model => model.programme)
         </th>
         <th>
-            @Html.Label("Email: ")
+            @Html.DisplayNameFor(model => model.email)
         </th>
         <th>
-            @Html.Label("Faculty: ")
+            @Html.DisplayNameFor(model => model.faculty)
         </th>
         <th></th>
     </tr>

@@ -7,14 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KKTF_e_Aduan.Models
+namespace KKTF_e_Aduan
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Table
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public string matricNo { get; set; }
+        public string name { get; set; }
+        public Nullable<int> ic { get; set; }
+        public Nullable<int> phone { get; set; }
+        public string address { get; set; }
+        public string programme { get; set; }
+        public string email { get; set; }
+        public string faculty { get; set; }
     }
 }

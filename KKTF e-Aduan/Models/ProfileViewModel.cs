@@ -5,7 +5,7 @@ using System.Web;
 
 namespace KKTF_e_Aduan.Models
 {
-    public class Profile
+    public class ProfileViewModel
     {
         public string matricNo { get; set; }
         public string name { get; set; }
@@ -14,6 +14,6 @@ namespace KKTF_e_Aduan.Models
         public string address { get; set; }
         public string programme { get; set; }
         public string email { get; set; }
-        public string faculty { get; set; }
+        public string faculty { get; set; } 
     }
 }

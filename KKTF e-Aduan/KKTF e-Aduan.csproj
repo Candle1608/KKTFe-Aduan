@@ -210,31 +210,33 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Profile.Context.cs">
+    <Compile Include="Models\Profile.cs" />
+    <Compile Include="Models\ProfileViewModel.cs" />
+    <Compile Include="ProfileModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Profile.Context.tt</DependentUpon>
+      <DependentUpon>ProfileModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Profile.cs">
+    <Compile Include="ProfileModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Profile.tt</DependentUpon>
+      <DependentUpon>ProfileModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Profile.Designer.cs">
+    <Compile Include="ProfileModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Profile.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Table.cs">
-      <DependentUpon>Profile.tt</DependentUpon>
+      <DependentUpon>ProfileModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Table.cs">
+      <DependentUpon>ProfileModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TestProfile.mdf" />
-    <Content Include="App_Data\TestProfile_log.ldf">
-      <DependentUpon>TestProfile.mdf</DependentUpon>
+    <Content Include="App_Data\Profile.mdf" />
+    <Content Include="App_Data\Profile_log.ldf">
+      <DependentUpon>Profile.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -258,27 +260,27 @@
     <Content Include="js\vendor\json2.js" />
     <Content Include="js\vendor\maskedinput.min.js" />
     <Content Include="Make_Complaint_.html" />
-    <Content Include="Models\Profile.Context.tt">
+    <Content Include="ProfileModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Profile.edmx</DependentUpon>
-      <LastGenOutput>Profile.Context.cs</LastGenOutput>
+      <DependentUpon>ProfileModel.edmx</DependentUpon>
+      <LastGenOutput>ProfileModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Profile.tt">
+    <Content Include="ProfileModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Profile.edmx</DependentUpon>
-      <LastGenOutput>Profile.cs</LastGenOutput>
+      <DependentUpon>ProfileModel.edmx</DependentUpon>
+      <LastGenOutput>ProfileModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\Profile.edmx">
+    <EntityDeploy Include="ProfileModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Profile.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProfileModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Profile.edmx.diagram">
-      <DependentUpon>Profile.edmx</DependentUpon>
+    <Content Include="ProfileModel.edmx.diagram">
+      <DependentUpon>ProfileModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -325,7 +327,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Profile\ProfileT.cshtml" />
     <Content Include="Views\Profile\Profile.cshtml" />
+    <Content Include="Views\Profile\Profile1.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

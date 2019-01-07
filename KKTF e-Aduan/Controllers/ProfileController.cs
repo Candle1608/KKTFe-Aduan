@@ -9,22 +9,16 @@ namespace KKTF_e_Aduan.Controllers
 {
     public class ProfileController : Controller
     {
-        private List<Profile> emp;
-        public ProfileController()
-        {
-            emp = new List<Profile>()
-                {
-                    new Profile()
-                    { Name =  "" },
-                };
-        }
-        
         
         // GET: Profile
-        public ActionResult Profile()
+        public ActionResult Profile1()
         {
-            var entities = new TestProfileDBEntities();
+           
+            ProfileEntities DB = new ProfileEntities();
+            //List<Table> profile = DB.KKTF_e_Aduan.ToList();
             return View();
         }
+
+        
     }
 }
